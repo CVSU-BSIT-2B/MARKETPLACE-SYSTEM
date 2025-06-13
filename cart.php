@@ -81,7 +81,7 @@ if (isset($_POST['delete_all'])) {
     $delete_all_query = $pdo->prepare("DELETE FROM cart WHERE user_id = :user_id");
     $delete_all_query->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     if ($delete_all_query->execute()) {
-        header("Location: cart.php"); // Redirect back to the cart after clearing
+        header("Location: cart.php"); 
         exit();
     }
 }
