@@ -15,7 +15,7 @@
     <div class="container">
         <section class="display_product">
             <?php
-            // Get the user_id from the session
+
             session_start();
             if (!isset($_SESSION['user_id'])) {
                 header("Location: login.php");
