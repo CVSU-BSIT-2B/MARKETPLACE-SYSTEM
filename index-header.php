@@ -55,9 +55,6 @@ $row_count = $stmt->rowCount(); // Get the count of rows in the result
                 <a class="nav-link" href="about.php"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="shop_products.php">Shop</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="furniture.php"> Furniture </a>
               </li>
               <li class="nav-item">
