@@ -1,0 +1,218 @@
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.header_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+/* Cart Icon */
+.cart {
+  font-size: 20px;
+  color: #333;
+  position: relative;
+  text-decoration: none;
+}
+
+.cart span {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+/* Container for product display */
+.container {
+  flex-grow: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Table styling */
+.display_product table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px; /* Bigger font size */
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.display_product thead {
+  background-color: #000;
+  color: #fff;
+}
+
+.display_product th,
+.display_product td {
+  padding: 20px 30px; /* More padding for bigger cells */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* Make images larger */
+.display_product img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+}
+
+/* Buttons for actions */
+.delete_product_btn,
+.update_product_btn {
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete_product_btn {
+  background-color: #e74c3c; /* Red */
+}
+
+.delete_product_btn:hover {
+  background-color: #c0392b;
+}
+
+.update_product_btn {
+  background-color: #3498db; /* Blue */
+}
+
+.update_product_btn:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: increase row height */
+.display_product tbody tr {
+  height: 120px;
+}
+
+/* Empty state */
+.empty_text {
+  text-align: center;
+  color: #777;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display_product table,
+  .display_product thead,
+  .display_product tbody,
+  .display_product th,
+  .display_product td,
+  .display_product tr {
+    display: block;
+  }
+
+  .display_product thead tr {
+    display: none;
+  }
+
+  .display_product tbody tr {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: #fff;
+  }
+
+  .display_product tbody td {
+    padding-left: 50%;
+    position: relative;
+    text-align: right;
+  }
+
+  .display_product tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 20px;
+    width: 45%;
+    padding-left: 10px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .display_product img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Header Branding */
+.navbar-brand img {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo and nav */
+}

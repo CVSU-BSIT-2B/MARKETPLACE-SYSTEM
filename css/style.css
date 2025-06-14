@@ -1,0 +1,82 @@
+/* Styling the products container */
+.trending_section .product-box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.trending_section .product-box:hover {
+  transform: scale(1.05);
+}
+
+/* Product image styling */
+.trending_section .product-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Product details */
+.trending_section .product-info {
+  padding: 15px 0;
+}
+
+.trending_section .product-info h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.trending_section .product-info .price {
+  font-size: 16px;
+  color: #d9ccb7;
+  font-weight: bold;
+}
+
+.trending_section .product-info .description {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Discount label styling */
+.trending_section .product-box .discount-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d9ccb7;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Hover effect for product */
+.trending_section .product-box:hover .discount-label {
+  background-color: #333;
+}
+
+/* Price font size change */
+.trending_section .product-box .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Adding a little padding to the main section */
+.trending_section.layout_padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* For smaller screens, adjust product box size */
+@media (max-width: 768px) {
+  .trending_section .product-box {
+    margin-bottom: 20px;
+  }
+}
+

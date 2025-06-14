@@ -1,0 +1,304 @@
+/* Reset and base setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Make body a flex container, column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.header_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  margin-right: auto;  /* Align logo to the left */
+}
+
+.logo img {
+  width: 50px; /* Adjust logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo and nav */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+/* Cart Icon */
+.cart {
+  font-size: 20px;
+  color: #333;
+  position: relative;
+  text-decoration: none;
+}
+
+.cart span {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+/* Container: centered both horizontally and vertically */
+.container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 40px auto; /* vertical spacing */
+  min-height: auto;
+}
+
+/* Section inside container */
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form split: image + fields */
+.add_product {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Image Upload Area */
+.image-upload-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 300px;
+  height: 300px;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px dashed #aaa;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-box i {
+  font-size: 80px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.image-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+.image-box input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+/* Form Fields */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+}
+
+.form-fields label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.input_fields {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* Submit Button */
+.submit_btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit_btn:hover {
+  background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .add_product {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-box {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+  }
+
+  .form-fields {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  .image-box {
+    height: 200px;
+  }
+
+  .input_fields, 
+  .submit_btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-fields label {
+    font-size: 14px;
+  }
+
+  .submit_btn {
+    border-radius: 20px;
+  }
+}
+
+.display_message {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #d1ffd1;
+  color: #055902;
+  border: 1px solid #a3e6a3;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.display_message i {
+  cursor: pointer;
+  color: #055902;
+}
+
+/* New Styles for Buttons */
+.delete_product_btn, .update_product_btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete_product_btn:hover, .update_product_btn:hover {
+  background-color: #0056b3;
+}
+
+.empty_text {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+/* Header Branding */
+.navbar-brand img {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo and nav */
+}

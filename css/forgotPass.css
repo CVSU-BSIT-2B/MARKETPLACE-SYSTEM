@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #D9CDB6;
+}
+
+.container{
+    width:650px;
+    height: 300px;
+    padding:1.5rem;
+    margin: 0 auto;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,1,0.9);
+    background-image: url(../images/bg-login.png);
+    background-size: cover;
+    border: 1px solid rgb(65, 64, 63);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+form{
+    margin:0 2rem;
+}
+
+.input-group input {
+    border: 1px solid #ccc;     
+    border-radius: 10px; 
+    padding-left:1.5rem;
+    padding: 10px;
+    font-size:15px;
+    display: block;
+    margin: auto;
+    width: 80%;
+    box-shadow:0 2px 5px rgba(0,0,1,0.9);
+    margin-top: 7%;
+}
+.title-p{
+    text-align: center;
+    margin: 0%;
+    color: #F1CBCB;
+}
+
+.input-group{
+    padding:1% 0;
+    position:relative;
+
+}
+.input-group i{
+    position:absolute;
+    color:black;
+}
+
+#logo {
+  max-width: 120px;
+  display: block;
+  margin: 20px auto;
+}
+
+.form-title{
+    width: max-content;
+    margin: 0 auto;
+}
+
+h1 {
+  overflow: hidden;
+  text-align: center;
+  margin: 0%;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+.signbtn input{
+  position: relative;
+  display: block;
+  margin : 0 auto;
+  width: 80%;
+  padding: 11px 20px;
+  background-color: rgb(226, 213, 201);
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.signbtn{
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    padding-top: 1%;
+}
